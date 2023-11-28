@@ -20,7 +20,7 @@ const Form = () => {
         <Input label="Nome" placeholder="Digite seu nome" />
         <Input label="Cargo" placeholder="Digite seu cargo" />
         <Input label="Imagem" placeholder="Digite o endereço da imagem" />
-        <Selection itens={teams} />
+        <Selection label="Time" itens={teams} />
       </form>
     </section>
   );
