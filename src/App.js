@@ -1,11 +1,13 @@
 import React from "react";
 import Banner from "./components/Banner";
+import Form from "./components/Form";
 
 function App() {
   return (
-    <React.Fragment>
+    <div>
       <Banner />
-    </React.Fragment>
+      <Form />
+    </div>
   );
 }
 
