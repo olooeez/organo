@@ -46,8 +46,16 @@ function App() {
   const [colaborators, setColaborators] = useState([]);
 
   const onColaboratorSigned = (colaborator) => {
-    setColaborators([...colaborators, colaborator])
-  }
+    setColaborators([...colaborators, colaborator]);
+  };
+
+  const deleteColaborator = (index) => {
+    const updatedColaborators = [...colaborators];
+
+    updatedColaborators.splice(index, 1);
+
+    setColaborators(updatedColaborators);
+  };
 
   return (
     <div>
@@ -62,7 +70,10 @@ function App() {
           name={team.name}
           primaryColor={team.primaryColor}
           secondaryColor={team.secondaryColor}
-          colaborators={colaborators.filter((colaborator => colaborator.team === team.name))}
+          colaborators={colaborators.filter(
+            (colaborator) => colaborator.team === team.name
+          )}
+          onDelete={deleteColaborator}
         />
       ))}
       <Footer />
