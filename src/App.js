@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { darken } from "polished";
 import React, { useState } from "react";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
@@ -276,6 +277,19 @@ function App() {
     );
   };
 
+  const changeTeamColor = (color, id) => {
+    setTeams(
+      teams.map((team) => {
+        if (team.id === id) {
+          team.secondaryColor = color;
+          team.primaryColor = darken(0.1, color);
+        }
+
+        return team;
+      })
+    );
+  };
+
   return (
     <div>
       <Banner />
@@ -287,6 +301,7 @@ function App() {
         <h1>Minha organização</h1>
         {teams.map((team, index) => (
           <Team
+            changeTeamColor={changeTeamColor}
             key={index}
             id={team.id}
             name={team.name}
