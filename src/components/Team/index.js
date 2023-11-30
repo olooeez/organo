@@ -19,8 +19,10 @@ const Team = (props) => {
                 name={colaborator.name}
                 job={colaborator.job}
                 image={colaborator.image}
+                favorite={colaborator.favorite}
                 backgroundColor={props.primaryColor}
                 onDelete={props.onDelete}
+                onFavorite={props.onFavorite}
               />
             );
           })}

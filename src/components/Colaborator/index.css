@@ -43,3 +43,8 @@
   left: 130px;
   cursor: pointer;
 }
+
+.favorite {
+  margin-top: 20px;
+  cursor: pointer;
+}
