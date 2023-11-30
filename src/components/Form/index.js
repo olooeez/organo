@@ -22,6 +22,7 @@ const Form = (props) => {
       job: job,
       image: image,
       team: team,
+      favorite: false,
     });
 
     setName("");

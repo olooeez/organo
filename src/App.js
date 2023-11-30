@@ -55,7 +55,7 @@ function App() {
   const initial = [
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "JULIANA AMOASEI",
       job: "Desenvolvedora de software e instrutora",
       image:
@@ -64,7 +64,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "DANIEL ARTINE",
       job: "Engenheiro de Software na Stone Age",
       image:
@@ -73,7 +73,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "GUILHERME LIMA",
       job: "Desenvolvedor Python e JavaScript na Alura",
       image:
@@ -82,6 +82,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: "PAULO SILVEIRA",
       job: "Hipster e CEO da Alura",
       image:
@@ -90,7 +91,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "JULIANA AMOASEI",
       job: "Desenvolvedora de software e instrutora",
       image:
@@ -99,6 +100,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: "DANIEL ARTINE",
       job: "Engenheiro de Software na Stone Age",
       image:
@@ -107,7 +109,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "GUILHERME LIMA",
       job: "Desenvolvedor Python e JavaScript na Alura",
       image:
@@ -116,7 +118,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "PAULO SILVEIRA",
       job: "Hipster e CEO da Alura",
       image:
@@ -125,7 +127,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "JULIANA AMOASEI",
       job: "Desenvolvedora de software e instrutora",
       image:
@@ -134,7 +136,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "DANIEL ARTINE",
       job: "Engenheiro de Software na Stone Age",
       image:
@@ -143,7 +145,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "GUILHERME LIMA",
       job: "Desenvolvedor Python e JavaScript na Alura",
       image:
@@ -152,7 +154,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "PAULO SILVEIRA",
       job: "Hipster e CEO da Alura",
       image:
@@ -161,6 +163,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: "JULIANA AMOASEI",
       job: "Desenvolvedora de software e instrutora",
       image:
@@ -169,7 +172,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "DANIEL ARTINE",
       job: "Engenheiro de Software na Stone Age",
       image:
@@ -178,7 +181,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "GUILHERME LIMA",
       job: "Desenvolvedor Python e JavaScript na Alura",
       image:
@@ -187,6 +190,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: "PAULO SILVEIRA",
       job: "Hipster e CEO da Alura",
       image:
@@ -195,7 +199,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "JULIANA AMOASEI",
       job: "Desenvolvedora de software e instrutora",
       image:
@@ -204,6 +208,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: "DANIEL ARTINE",
       job: "Engenheiro de Software na Stone Age",
       image:
@@ -212,7 +217,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "GUILHERME LIMA",
       job: "Desenvolvedor Python e JavaScript na Alura",
       image:
@@ -221,6 +226,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: "PAULO SILVEIRA",
       job: "Hipster e CEO da Alura",
       image:
@@ -229,7 +235,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "JULIANA AMOASEI",
       job: "Desenvolvedora de software e instrutora",
       image:
@@ -238,7 +244,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "DANIEL ARTINE",
       job: "Engenheiro de Software na Stone Age",
       image:
@@ -247,7 +253,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "GUILHERME LIMA",
       job: "Desenvolvedor Python e JavaScript na Alura",
       image:
@@ -256,7 +262,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      favorito: false,
+      favorite: false,
       name: "PAULO SILVEIRA",
       job: "Hipster e CEO da Alura",
       image:
@@ -292,7 +298,20 @@ function App() {
 
   const onTeamSigned = (team) => {
     setTeams([...teams, team]);
-  }
+  };
+
+  const favoriteColaborator = (id) => {
+    setColaborators(
+      colaborators.map((colaborator) => {
+        if (colaborator.id === id) {
+          colaborator.favorite = !colaborator.favorite;
+          console.log(colaborator);
+        }
+
+        return colaborator;
+      })
+    );
+  };
 
   return (
     <div>
@@ -316,6 +335,7 @@ function App() {
               (colaborator) => colaborator.team === team.name
             )}
             onDelete={deleteColaborator}
+            onFavorite={favoriteColaborator}
           />
         ))}
       </section>
