@@ -1,6 +1,14 @@
 .team {
   text-align: center;
   padding: 32px;
+  background-blend-mode: multiply;
+  position: relative;
+}
+
+.input-color {
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }
 
 .team > h3 {
@@ -12,7 +20,8 @@
 
 .team > .colaborators {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 30px;
   margin-top: 32px;
   flex-wrap: wrap;
 }

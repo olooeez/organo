@@ -6,19 +6,21 @@ const Team = (props) => {
     props.colaborators.length > 0 && (
       <section
         className="team"
-        style={{ backgroundColor: props.secondaryColor }}
+        style={{ backgroundImage: "url(/images/fundo.png)", backgroundColor: props.secondaryColor }}
       >
+        <input onChange={(event) => props.changeTeamColor(event.target.value, props.id)} value={props.secondaryColor} type="color" className="input-color" />
         <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
         <div className="colaborators">
           {props.colaborators.map((colaborator, index) => {
             return (
               <Colaborator
                 key={index}
+                id={colaborator.id}
                 name={colaborator.name}
                 job={colaborator.job}
                 image={colaborator.image}
                 backgroundColor={props.primaryColor}
-                onDelete={(index) => props.onDelete(index)}
+                onDelete={props.onDelete}
               />
             );
           })}
