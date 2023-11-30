@@ -4,7 +4,7 @@
 
 .colaborator > .heading {
   background-color: #f0f0f0;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 0 0 0;
 }
 
 .colaborator > .heading > img {
@@ -35,4 +35,11 @@
   line-height: 22px;
   color: #212121;
   padding: 0 16px;
+}
+
+.colaborator > #delete-button {
+  position: relative;
+  bottom: -25px;
+  left: 130px;
+  cursor: pointer;
 }
