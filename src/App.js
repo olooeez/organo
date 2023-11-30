@@ -290,12 +290,17 @@ function App() {
     );
   };
 
+  const onTeamSigned = (team) => {
+    setTeams([...teams, team]);
+  }
+
   return (
     <div>
       <Banner />
       <Form
         teams={teams.map((team) => team.name)}
         onColaboratorSigned={onColaboratorSigned}
+        onTeamSigned={onTeamSigned}
       />
       <section className="teams">
         <h1>Minha organização</h1>
