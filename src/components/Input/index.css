@@ -17,3 +17,8 @@
   padding: 24px;
   box-sizing: border-box;
 }
+
+.text > input[type=color] {
+  padding: 4px;
+  width: 30%;
+}

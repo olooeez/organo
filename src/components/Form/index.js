@@ -89,7 +89,7 @@ const Form = (props) => {
         <Input
           onChange={(value) => setTeamColor(value)}
           required={true}
-          label="Cargo"
+          label="Cor"
           placeholder="Digite a cor do time"
           value={teamColor}
           type="color"
